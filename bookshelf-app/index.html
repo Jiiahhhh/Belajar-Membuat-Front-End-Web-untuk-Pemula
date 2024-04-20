@@ -3,24 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookshelf App</title>
+    <title>Bookshelf Apps</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <h1>Bookshelf App</h1>
-    <form id="bookForm">
-      <input type="text" id="title" placeholder="Title" required />
-      <input type="text" id="author" placeholder="Author" required />
-      <input type="number" id="year" placeholder="Year" required />
-      <label> <input type="checkbox" id="isComplete" />Completed </label>
-      <button type="submit">Add Book</button>
-    </form>
+    <header class="head_bar">
+      <img src="assets/logo.png" alt="Bookshelf Logo" class="logo" />
+      <h1>Bookshelf Apps</h1>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2>Add New Book</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Title</label>
+            <input id="inputBookTitle" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Author</label>
+            <input id="inputBookAuthor" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Year</label>
+            <input id="inputBookYear" type="number" required />
+          </div>
+          <div class="input_inline">
+            <label class="checkbox-label">
+              <input type="checkbox" id="inputBookIsComplete" />
+              Completed
+            </label>
+          </div>
+          <button type="submit">Submit Book</button>
+        </form>
+      </section>
 
-    <h2>Unfinished Books</h2>
-    <div id="unfinishedBooks"></div>
+      <section class="search_section">
+        <h2>Search Books</h2>
+        <form id="searchBook">
+          <input
+            id="searchBookTitle"
+            type="text"
+            placeholder="Enter title to search"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
 
-    <h2>Finished Books</h2>
-    <div id="finishedBooks"></div>
+      <section class="book_shelf" id="incompleteBookshelfList">
+        <h2>Books In Progress</h2>
+      </section>
+
+      <section class="book_shelf" id="completeBookshelfList">
+        <h2>Completed Books</h2>
+      </section>
+    </main>
+
+    <div id="editDialog" class="edit-dialog" style="display: none">
+      <div class="edit-dialog-content">
+        <div class="edit-dialog-header">
+          <span class="edit-dialog-close">&times;</span>
+          <h2>Edit Book</h2>
+        </div>
+        <div class="edit-dialog-body">
+          <form id="editBookForm">
+            <label for="editTitle">Title:</label>
+            <input type="text" id="editTitle" name="title" required />
+            <label for="editAuthor">Author:</label>
+            <input type="text" id="editAuthor" name="author" required />
+            <label for="editYear">Year:</label>
+            <input type="number" id="editYear" name="year" required />
+            <!-- <label class="checkbox-label">
+              <input type="checkbox" id="editIsComplete" />
+              Completed
+            </label> -->
+
+            <button type="submit">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script src="js/scripts.js"></script>
   </body>

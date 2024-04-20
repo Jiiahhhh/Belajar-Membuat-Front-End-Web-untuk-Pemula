@@ -1,24 +1,160 @@
-body {
-  font-family: Arial, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-form {
-  margin-bottom: 200px;
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+  color: #eee;
+}
+
+body {
+  background-color: #333;
 }
 
 input,
 button {
-  margin-top: 10px;
-  margin-right: 5px;
+  font-size: 16px;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
 }
 
-#unfinishedBooks,
-#finishedBooks {
+.head_bar {
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.input_section,
+.book_shelf,
+.search_section {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.book {
-  border: 1px solid #ddd;
-  padding: 8px;
+.input_section h2,
+.book_shelf h2,
+.search_section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: #28a745;
+  display: block;
+  width: 100%;
+}
+
+.book_item {
+  background-color: #555;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book_item h3,
+.book_item p {
+  margin-bottom: 5px;
+}
+
+.action button {
+  margin-right: 10px;
+}
+
+.action .green {
+  background-color: #28a745;
+}
+
+.action .red {
+  background-color: #dc3545;
+}
+
+.edit-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #f2f2f2; /* Warna latar yang lebih lembut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+}
+
+.edit-dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc; /* Warna border yang halus */
+  padding-bottom: 10px;
+}
+
+.edit-dialog-header h2 {
+  color: #333; /* Warna teks yang lebih gelap */
+}
+
+.edit-dialog-close {
+  cursor: pointer;
+  color: #757575; /* Warna untuk tombol tutup */
+  font-size: 24px;
+}
+
+.edit-dialog-close:hover {
+  color: #333;
+}
+
+.edit-dialog-body {
+  padding-top: 20px;
+}
+
+.edit-dialog-body form label {
+  display: block;
+  margin-top: 10px;
+  color: #333; /* Warna label yang lebih gelap untuk kontras */
+}
+
+.edit-dialog-body form input,
+.edit-dialog-body form button {
+  width: 100%;
+  padding: 10px;
   margin-top: 5px;
+  border: 1px solid #ccc; /* Warna border input */
+  background-color: #fff; /* Warna latar input */
+  color: #333; /* Warna teks input */
+}
+
+.edit-dialog-body form button {
+  background-color: #4caf50; /* Warna tombol hijau */
+  color: white; /* Warna teks tombol */
+  border: none;
+}
+
+.edit-dialog-body form button:hover {
+  background-color: #45a049; /* Warna tombol saat hover */
 }
