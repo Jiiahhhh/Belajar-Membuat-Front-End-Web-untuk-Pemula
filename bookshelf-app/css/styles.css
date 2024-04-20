@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+form {
+  margin-bottom: 200px;
+}
+
+input,
+button {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+#unfinishedBooks,
+#finishedBooks {
+  margin-bottom: 20px;
+}
+
+.book {
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-top: 5px;
+}
