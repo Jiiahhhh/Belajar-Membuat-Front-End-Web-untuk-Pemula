@@ -18,7 +18,7 @@
     <main>
       <section class="input_section">
         <h2>Add New Book</h2>
-        <form id="inputBook">
+        <form id="inputBook" class="input-full">
           <div class="input">
             <label for="inputBookTitle">Title</label>
             <input id="inputBookTitle" type="text" required />
@@ -43,7 +43,7 @@
 
       <section class="search_section">
         <h2>Search Books</h2>
-        <form id="searchBook">
+        <form id="searchBook" class="search-box">
           <input
             id="searchBookTitle"
             type="text"
@@ -76,10 +76,6 @@
             <input type="text" id="editAuthor" name="author" required />
             <label for="editYear">Year:</label>
             <input type="number" id="editYear" name="year" required />
-            <!-- <label class="checkbox-label">
-              <input type="checkbox" id="editIsComplete" />
-              Completed
-            </label> -->
 
             <button type="submit">Update</button>
           </form>

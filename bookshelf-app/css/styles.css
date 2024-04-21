@@ -1,3 +1,4 @@
+/* styles.css */
 * {
   padding: 0;
   margin: 0;
@@ -19,6 +20,15 @@ input,
 button {
   font-size: 16px;
   background-color: #555;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+button {
+  font-size: 16px;
+  background-color: #28a745;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -55,12 +65,46 @@ main {
   margin-bottom: 15px;
 }
 
-button {
-  cursor: pointer;
-  color: white;
-  background-color: #28a745;
-  display: block;
-  width: 100%;
+.input_section .input,
+.search_section .input {
+  margin-bottom: 10px; /* Menambahkan spasi antara input */
+}
+
+.input_section .input input,
+.search_section input {
+  width: 100%; /* Menetapkan lebar input penuh */
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+
+.input_section .input_inline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.input_section .input_inline label {
+  display: inline-block; /* Membuat label inline */
+  margin-right: 10px; /* Memberi spasi antara label dan checkbox */
+}
+
+/* Mengatur ulang button Submit agar sejajar dengan input box */
+.input_section form button {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* Mengatur ulang form pencarian agar input box dan tombol search sejajar */
+.search_section form {
+  display: flex;
+}
+
+.search_section form input {
+  flex-grow: 1; /* Input akan memenuhi ruang tersedia */
+  margin-right: 10px; /* Memberi spasi antara input dan tombol */
+}
+
+.search_section form button {
+  white-space: nowrap; /* Pastikan teks tombol tidak bungkus */
 }
 
 .book_item {
